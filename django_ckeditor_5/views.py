@@ -2,10 +2,7 @@ from django import get_version
 from django.http import Http404
 from django.utils.module_loading import import_string
 
-if get_version() >= "4.0":
-    from django.utils.translation import gettext_lazy as _
-else:
-    from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
